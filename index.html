@@ -44,9 +44,59 @@
       </nav>
     </header>
     <main>
-      <section>
-        <h1>Trouvez votre hébergement pour des vacances de rêve</h1>
-        <p>En plein centre de ville ou en pleine nature</p>
+      <section class="hero">
+        <h1 class="hero__title">
+          Trouvez votre hébergement pour des vacances de rêve
+        </h1>
+        <p class="hero__slogan">En plein centre de ville ou en pleine nature</p>
+        <form class="hero__search-form" method="">
+          <label class="hero__search-icon-label" for="location"
+            ><i class="fa-solid fa-location-dot"></i
+          ></label>
+          <input
+            class="hero__search-input"
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Marseille, France" />
+          <button
+            class="hero__search-btn"
+            type="submit"
+            name="submit"
+            value="search">
+            <span class="hero__search-bt-text">Rechercher</span>
+            <span class="hero__search-bt-icon"
+              ><i class="fa fa-search"></i
+            ></span>
+          </button>
+        </form>
+        <div class="hero__filter">
+          <p class="hero__filter-label">Filtres</p>
+          <button class="hero__filter-btn">
+            <i class="fa-solid fa-money-bill-wave"></i>
+            <span class="hero__filter-btn-text">Économique</span>
+          </button>
+          <button class="hero__filter-btn">
+            <i class="fa-solid fa-person"></i>
+            <span class="hero__filter-btn-text">Familial</span>
+          </button>
+          <button class="hero__filter-btn">
+            <i class="fa-solid fa-heart"></i>
+            <span class="hero__filter-btn-text">Romantique</span>
+          </button>
+          <button class="hero__filter-btn">
+            <i class="fa-solid fa-dog"></i>
+            <span class="hero__filter-btn-text">Animaux autorisés</span>
+          </button>
+        </div>
+        <div class="hero__info">
+          <div class="hero__info-icon">
+            <i class="fa-solid fa-info fa-sm"></i>
+          </div>
+          <p class="hero__info-text">
+            Plus de 500 logements sont disponibles dans cette ville
+          </p>
+        </div>
       </section>
     </main>
     <footer></footer>

@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* Hero title */
+.hero__title {
+  font-size: 1.375em;
+}
+.hero > * {
+  margin: 20px 0;
+}
+
+/* Hero Form */
+.hero__search-form {
+  width: 420px;
+  height: 50px;
+  display: flex;
+}
+.hero__search-icon-label {
+  background-color: #f2f2f2;
+  height: 50px;
+  width: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px 0 0 15px;
+}
+.hero__search-input {
+  flex-grow: 1;
+  padding-left: 15px;
+  border-top: 2px solid #f2f2f2;
+  border-bottom: 2px solid #f2f2f2;
+}
+.hero__search-input::placeholder {
+  font-weight: 700;
+  font-size: 1.1em;
+  color: rgba(0, 0, 0, 0.626);
+}
+.hero__search-input:focus {
+  outline: none;
+  border: 2px solid #0066ff;
+  border-right: none;
+  padding-left: 13px;
+}
+.hero__search-btn {
+  background-color: #0066ff;
+  border-radius: 0 15px 15px 0;
+  padding: 0 15px;
+}
+.hero__search-bt-text {
+  display: inline;
+  color: #ffffff;
+  font-weight: 700;
+}
+.hero__search-bt-icon {
+  display: none;
+  color: #ffffff;
+}
+
+/* Hero Filters */
+.hero__filter {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 15px 30px;
+  margin: 30px 0;
+}
+
+.hero__filter-label,
+.hero__filter-btn-text {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.hero__filter-btn i {
+  font-size: 1.1em;
+  color: #0065fc;
+}
+
+.hero__filter-btn {
+  background-color: #ffffff;
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+  padding: 10px 14px;
+  min-width: 190px;
+}
+.hero__filter-btn:hover {
+  background-color: #deebff;
+}
+
+.hero__info {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.hero__info-icon {
+  border: 2px solid #d9d9d9;
+  border-radius: 25px;
+  padding: 7px;
+  color: #0066ff;
+}
+@media screen and (max-width: 768px) {
+  /* Hero Form */
+  .hero__search-form {
+    width: 300px;
+  }
+  .hero__search-bt-text {
+    display: none;
+  }
+  .hero__search-bt-icon {
+    display: inline;
+  }
+  /* Hero Filters */
+  .hero__filter {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: auto;
+    gap: 10px;
+  }
+  .hero__filter-label {
+    grid-column: 1 / -1;
+  }
+  .hero__filter-btn-text {
+    font-size: 1em;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .hero__filter-btn {
+    width: 80%;
+    min-width: 0;
+    padding: 8px 10px;
+    font-size: 0.8em;
+  }
+}
