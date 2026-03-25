@@ -1,0 +1,80 @@
+.accommodations {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  border: 2px solid blue;
+}
+.accommodations__btn {
+  font-weight: 700;
+  font-size: 1.1em;
+}
+.accommodations-marseille {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 625px;
+  height: auto;
+  background-color: #f2f2f2;
+  border-radius: 35px;
+  z-index: -2;
+  padding: 40px 30px;
+}
+.accommodations-marseille__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  max-width: 820px;
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  border: 5px solid rgb(255, 255, 255);
+  border-radius: 25px;
+  object-fit: cover;
+  width: 246px;
+  height: 185px;
+  box-shadow: 0 0 15px #0000004a;
+  cursor: pointer;
+}
+.card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s;
+}
+.card__img {
+  height: 110px;
+  border-radius: 20px 20px 0 0;
+}
+.card__info {
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  border-radius: 0 0 15px 15px;
+}
+.card__info i {
+  color: #0065fc;
+}
+.card__info i.grey {
+  color: #f2f2f2;
+}
+.accommodations-popular {
+  width: 415px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+  border-radius: 35px;
+  padding: 40px 30px;
+}
+.accommodations-popular__title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0065fc;
+}
+.accommodations__btn {
+  z-index: 2;
+  cursor: pointer;
+}
