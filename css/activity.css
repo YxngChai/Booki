@@ -26,6 +26,12 @@
   font-size: 1.1em;
   margin: 10px 0 0 20px;
 }
+
+.activities-grid__card:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in;
+}
+
 /* Small Desktop */
 @media screen and (max-width: 1440px) {
   .activities-grid__card-img {

@@ -1,0 +1,27 @@
+.footer {
+  background-color: #f2f2f2;
+  min-height: 300px;
+  padding: 50px 70px;
+  display: flex;
+  justify-content: space-between;
+}
+.footer-section {
+  width: 300px;
+}
+.footer-section__list {
+  margin-top: 20px;
+  line-height: 2;
+}
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .footer {
+    padding: 50px 0 50px 40px;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
