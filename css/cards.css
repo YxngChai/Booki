@@ -15,17 +15,14 @@
   gap: 50px;
   min-height: 625px;
   height: auto;
-  min-width: 790px;
-  flex: 2 0 700px;
   background-color: #f2f2f2;
   border-radius: 35px;
-  padding: 40px 30px 40px 30px;
+  padding: 40px 30px;
 }
 .accommodations-marseille__cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  grid-template: 1fr 1fr / repeat(3, 1fr);
   gap: 40px;
-  max-width: 1000px;
 }
 .card {
   display: flex;
@@ -72,10 +69,17 @@ i.grey {
 }
 
 /* Les plus populaires */
+.accommodations-popular {
+  min-width: 425px;
+  background-color: #f2f2f2;
+  border-radius: 35px;
+  padding: 40px 30px;
+  height: auto;
+}
+
 .card--popular {
   display: grid;
   grid-template: 140px / 140px 1fr;
-  justify-content: space-between;
   border: 5px solid rgb(255, 255, 255);
   background-color: #ffffff;
   border-radius: 25px;
@@ -87,7 +91,7 @@ i.grey {
 }
 
 .card--popular .card__img {
-  width: 100%;
+  width: 90%;
   height: 100%;
   max-width: 140px;
   object-fit: cover;
@@ -96,14 +100,9 @@ i.grey {
 
 .popular-card__info {
   line-height: 2;
+  margin: 10px 0 0 0;
 }
 
-.accommodations-popular {
-  min-width: 425px;
-  background-color: #f2f2f2;
-  border-radius: 35px;
-  padding: 40px 30px;
-}
 .accommodations-popular__title {
   margin-bottom: 40px;
 }
@@ -126,7 +125,7 @@ i.grey {
   transform: translateY(-2px);
   transition: transform 0.2s ease-in;
 }
-
+/* Small Desktop */
 @media screen and (max-width: 1440px) {
   .accommodations {
     grid-template: 1fr 2fr/ 1fr;
@@ -139,5 +138,45 @@ i.grey {
   }
   .accommodations-popular__cards {
     flex-direction: row;
+  }
+  .popular-card__info {
+    line-height: 1.3;
+  }
+}
+/* Tablet */
+@media screen and (max-width: 992px) {
+  .accommodations-popular__cards {
+    flex-direction: column;
+  }
+  .accommodations {
+    grid-template: 1fr/ 1fr;
+  }
+}
+/* Mobile */
+@media screen and (max-width: 768px) {
+  body {
+    padding: 0;
+  }
+  .hero {
+    padding: 0 20px;
+  }
+  .accommodations {
+    grid-template: 640px 2fr/ 1fr;
+  }
+  .accommodations-marseille,
+  .accommodations-popular {
+    border-radius: 0;
+  }
+  .accommodations-marseille {
+    background-color: #ffffff;
+  }
+  .accommodations-marseille__cards {
+    grid-template: repeat(6, 1fr) / 1fr;
+  }
+  .card {
+    height: 200px;
+  }
+  .card__img {
+    height: 120px;
   }
 }
