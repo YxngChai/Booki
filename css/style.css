@@ -19,11 +19,11 @@ ul {
   margin: 0;
 }
 
-/* button,
+button,
 input {
   all: unset;
   cursor: pointer;
-} */
+}
 a {
   text-decoration: none;
   color: inherit;

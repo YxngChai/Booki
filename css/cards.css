@@ -1,80 +1,143 @@
 .accommodations {
-  display: flex;
-  justify-content: space-between;
-  gap: 50px;
-  border: 2px solid blue;
+  display: grid;
+  grid-template: 1fr / 2fr 1fr;
+  gap: 30px;
 }
 .accommodations__btn {
   font-weight: 700;
   font-size: 1.1em;
 }
+
+/* Hébergements à Marseille */
 .accommodations-marseille {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  gap: 50px;
   min-height: 625px;
   height: auto;
+  min-width: 790px;
+  flex: 2 0 700px;
   background-color: #f2f2f2;
   border-radius: 35px;
-  z-index: -2;
-  padding: 40px 30px;
+  padding: 40px 30px 40px 30px;
 }
 .accommodations-marseille__cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  max-width: 820px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 40px;
+  max-width: 1000px;
 }
 .card {
   display: flex;
   flex-direction: column;
   border: 5px solid rgb(255, 255, 255);
+  background-color: #ffffff;
   border-radius: 25px;
   object-fit: cover;
-  width: 246px;
-  height: 185px;
+  height: 175px;
   box-shadow: 0 0 15px #0000004a;
   cursor: pointer;
 }
-.card:hover {
-  transform: translateY(-2px);
-  transition: transform 0.2s;
-}
-.card__img {
-  height: 110px;
-  border-radius: 20px 20px 0 0;
-}
-.card__info {
-  background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 100%;
-  border-radius: 0 0 15px 15px;
-}
-.card__info i {
-  color: #0065fc;
-}
-.card__info i.grey {
-  color: #f2f2f2;
-}
-.accommodations-popular {
-  width: 415px;
+.card__info,
+.popular-card__info {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  height: 85%;
+  margin: 10px 0 0 10px;
+  font-size: 0.8em;
+  padding-right: 10px;
+}
+
+.card__img {
+  height: 100%;
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+.card__info-stars {
+  margin-top: auto;
+}
+.card__info i,
+.popular-card__info i {
+  color: #0065fc;
+}
+i.grey {
+  color: #f2f2f2;
+}
+.accommodations__btn {
+  z-index: 2;
+  cursor: pointer;
+}
+
+/* Les plus populaires */
+.card--popular {
+  display: grid;
+  grid-template: 140px / 140px 1fr;
+  justify-content: space-between;
+  border: 5px solid rgb(255, 255, 255);
+  background-color: #ffffff;
+  border-radius: 25px;
+  object-fit: cover;
+  height: 140px;
+  box-shadow: 0 0 15px #0000004a;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.card--popular .card__img {
+  width: 100%;
+  height: 100%;
+  max-width: 140px;
+  object-fit: cover;
+  border-radius: 20px 0 0 20px;
+}
+
+.popular-card__info {
+  line-height: 2;
+}
+
+.accommodations-popular {
+  min-width: 425px;
   background-color: #f2f2f2;
   border-radius: 35px;
   padding: 40px 30px;
+}
+.accommodations-popular__title {
+  margin-bottom: 40px;
+}
+.accommodations-popular__cards {
+  order: 1px solid pink;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 .accommodations-popular__title {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #0065fc;
+  /* background-color: #0065fc; */
 }
-.accommodations__btn {
-  z-index: 2;
-  cursor: pointer;
+
+.card:hover,
+.card--popular:hover {
+  transform: translateY(-2px);
+  transition: transform 0.2s ease-in;
+}
+
+@media screen and (max-width: 1440px) {
+  .accommodations {
+    grid-template: 1fr 2fr/ 1fr;
+  }
+  .accommodations > :nth-child(1) {
+    grid-row: 2;
+  }
+  .accommodations > :nth-child(2) {
+    grid-row: 1;
+  }
+  .accommodations-popular__cards {
+    flex-direction: row;
+  }
 }
