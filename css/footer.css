@@ -5,12 +5,14 @@
   display: flex;
   justify-content: space-between;
 }
-.footer-section {
+.footer__section {
   width: 300px;
 }
-.footer-section__list {
+.footer__section-list {
   margin-top: 20px;
-  line-height: 2;
+}
+.footer__section-list-item {
+  line-height: 1.5;
 }
 /* Tablet */
 @media screen and (max-width: 992px) {
