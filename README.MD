@@ -1,6 +1,6 @@
 # Booki - OpenClassrooms Project
 
-A responsive front-end integration project made as part of the OpenClassrooms Web Developer course.
+A responsive front-end integration project I found on OpenClassrooms.
 
 The goal of this project was to recreate a travel accommodation landing page from a provided Figma design using only HTML and CSS while following modern semantic and accessibility practices.
 
